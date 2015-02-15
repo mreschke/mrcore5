@@ -1,0 +1,8 @@
+#!/bin/bash
+
+workbench="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+mrcore="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd ../../../ && pwd )"
+file="$1"
+
+cd $mrcore
+phpunit "$workbench/$file"

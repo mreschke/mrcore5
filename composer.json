@@ -1,0 +1,56 @@
+{
+	"name": "Mreschke/Mrcore",
+	"description": "mRcore5 - Wiki/Content Management System",
+	"keywords": ["mrcore", "wiki", "blog", "slim", "cms", "mreschke"],
+	"homepage": "http://mreschke.com",
+	"license": "http://mreschke.com/topic/317/MITLicense",
+	"authors": [
+		{
+			"name": "Matthew Reschke",
+			"homepage": "http://mreschke.com"
+		}
+	],
+	"require": {
+		"laravel/framework": "4.2.*",
+		"sabre/dav": "1.8.7",
+		"camspiers/porter-stemmer": "1.0.0",
+		"easybook/geshi": "dev-master",
+		"barryvdh/laravel-debugbar": "~1.8@dev"
+	},
+	"autoload": {
+		"classmap": [
+			"app/commands",
+			"app/controllers",
+			"app/models",
+			"app/database/migrations",
+			"app/database/seeds",
+			"app/tests/TestCase.php",
+			"app/library"
+		],
+		"psr-0": {
+			"Mrcore": "app/"
+		}
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"php artisan optimize"
+		],
+		"pre-update-cmd": [
+			"php artisan clear-compiled"
+		],
+		"post-update-cmd": [
+			"php artisan optimize"
+		],
+		"post-create-project-cmd": [
+			"php artisan key:generate"
+		]
+	},
+	"config": {
+		"preferred-install": "dist"
+	},
+	"minimum-stability": "dev",
+	"require-dev": {
+		"fzaninotto/faker": "1.4.*",
+		"way/generators": "2.*"
+	}
+}

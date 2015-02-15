@@ -1,0 +1,30 @@
+# Mrcore Exclusions
+/files/*
+!/files/mrcore
+!/workbench/theme/current-theme
+!/workbench/theme/default-theme
+/workbench/*
+!/workbench/mrcore
+!/workbench/artisan.php
+!/workbench/config.php
+!/workbench/register.php
+!/workbench/theme
+/public/uploads/*
+!/public/uploads/avatar_user1.png
+!/public/uploads/avatar_user2.png
+!/public/uploads/badge1.png
+
+# Common Exclusions
+/bootstrap/compiled.php
+vendor
+composer.phar
+composer.lock
+.env.*.php
+.env.php
+/.local
+.DS_Store
+Thumbs.db
+.nfs*
+.swp
+
+

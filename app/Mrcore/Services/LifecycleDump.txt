@@ -1,0 +1,36 @@
+My Service Order
+MrcoreServiceProvider
+RouterServiceProvider
+WorkbenchServiceProvider
+LayoutServicePrivider
+UrlServiceProvider
+
+
+
+public/index.php
+bootstrap/autoload.php
+vendor/autoload.php
+bootstrap/start.php
+$app = new Illuminate\Foundation\Application
+bind paths
+require Illuminate/Foundation/start.php
+app/Mrcore/Services/MrcoreServiceProvider.php - register
+app/Mrcore/Services/RouterServiceProvider.php - register
+app/Mrcore/Services/WorkbenchServiceProvider.php - register
+app/Mrcore/Services/LayoutServiceProvider.php - register
+app/Mrcore/Services/UrlServiceProvider.php - register
+workbench/mrcore/bootswatch-theme/src/Mrcore/BootswatchTheme/BootswatchThemeServiceProvider.php - register
+$app->run()
+app/Mrcore/Services/MrcoreServiceProvider.php - boot
+workbench/config.php
+workbench/register.php
+app/Mrcore/Services/RouterServiceProvider.php - boot
+app/Mrcore/Services/WorkbenchServiceProvider.php - boot
+app/Mrcore/Services/LayoutServiceProvider.php - boot
+app/Mrcore/Services/UrlServiceProvider.php - boot
+workbench/mrcore/bootswatch-theme/src/Mrcore/BootswatchTheme/BootswatchThemeServiceProvider.php - boot
+app/start/global.php
+app/filters.php
+app/start/development.php
+app/routes.php
+app/filters.php - before
