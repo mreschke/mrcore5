@@ -6,10 +6,7 @@
     RewriteEngine On
 
     # Redirect Trailing Slashes...
-    #mReschke, this actually messes up some webdav clients like cadaver
-    #Because cadaver always wants a / at end, so this rewrite rule hits and
-    #returns a 301 moved header to cadaver which causes it not to work
-    #RewriteRule ^(.*)/$ /$1 [L,R=301]
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
 
     # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d

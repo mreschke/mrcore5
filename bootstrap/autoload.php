@@ -1,5 +1,4 @@
 <?php
-$lifecycle[] = __FILE__;
 
 define('LARAVEL_START', microtime(true));
 
@@ -14,7 +13,7 @@ define('LARAVEL_START', microtime(true));
 | loading of any our classes "manually". Feels great to relax.
 |
 */
-$lifecycle[] = '	vendor/autoload.php';
+
 require __DIR__.'/../vendor/autoload.php';
 
 /*
@@ -28,40 +27,17 @@ require __DIR__.'/../vendor/autoload.php';
 |
 */
 
-if (file_exists($compiled = __DIR__.'/compiled.php'))
+$compiledPath = __DIR__.'/../storage/framework/compiled.php';
+
+if (file_exists($compiledPath))
 {
-	require $compiled;
+	require $compiledPath;
 }
 
 /*
 |--------------------------------------------------------------------------
-| Setup Patchwork UTF-8 Handling
-|--------------------------------------------------------------------------
-|
-| The Patchwork library provides solid handling of UTF-8 strings as well
-| as provides replacements for all mb_* and iconv type functions that
-| are not available by default in PHP. We'll setup this stuff here.
-|
-*/
-
-Patchwork\Utf8\Bootup::initMbstring();
-
-/*
-|--------------------------------------------------------------------------
-| Register The Laravel Auto Loader
-|--------------------------------------------------------------------------
-|
-| We register an auto-loader "behind" the Composer loader that can load
-| model classes on the fly, even if the autoload files have not been
-| regenerated for the application. We'll add it to the stack here.
-|
-*/
-
-Illuminate\Support\ClassLoader::register();
-
-/*
-|--------------------------------------------------------------------------
 | Register The Workbench Loaders
+| mReschke Added Back form Laravel 4.x
 |--------------------------------------------------------------------------
 |
 | The Laravel workbench provides a convenient place to develop packages
@@ -69,8 +45,7 @@ Illuminate\Support\ClassLoader::register();
 | auto-load files for the packages so that these can be used here.
 |
 */
-
-if (is_dir($workbench = __DIR__.'/../workbench'))
-{
-	Illuminate\Workbench\Starter::start($workbench);
-}
+#if (is_dir($workbench = __DIR__.'/../workbench'))
+#{
+	#Illuminate\Workbench\Starter::start($workbench);
+#}
