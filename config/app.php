@@ -149,16 +149,12 @@ return [
 		/*
 		 * Mrcore Service Providers...
 		 */
-		#'Mrcore\Modules\Auth\Providers\AuthServiceProvider',
-		#'Mrcore\Modules\Wiki\Providers\WikiServiceProvider',
 		'Mrcore\Modules\Foundation\Providers\FoundationServiceProvider',
-
-		
 
 		/*
 		 * Additional Service Providers...
 		 */
-		#'Barryvdh\Debugbar\ServiceProvider',
+		//'Barryvdh\Debugbar\ServiceProvider',
 
 	],
 
@@ -209,12 +205,6 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
 		'Form'      => 'Illuminate\Html\FormFacade',
 		'Html'      => 'Illuminate\Html\HtmlFacade',
-
-		/*
-		 * Mrcore Specific Aliases...
-		 */
-		'Mrcore'          => 'Mrcore\Facades\Mrcore',
-		#'Workbench'       => 'Mrcore\Facades\Workbench',
 
 	],
 

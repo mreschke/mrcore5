@@ -34,6 +34,10 @@ class AppServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
+		// Register Foundation Facades
+		$loader = \Illuminate\Foundation\AliasLoader::getInstance();
+		$loader->alias('Mrcore', 'Mrcore\Facades\Mrcore');
+
 		$this->app->bind('Illuminate\Contracts\Auth\Registrar', 'Mrcore\Services\Registrar');
 
 		// Mrcore Bindings
