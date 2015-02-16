@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9d3860a8f60d763302a2793355efef8f",
+    "hash": "8aaeb61251d646b81f3abbe529117199",
     "packages": [
         {
             "name": "camspiers/porter-stemmer",
@@ -251,42 +251,6 @@
                 "string"
             ],
             "time": "2015-01-01 18:34:57"
-        },
-        {
-            "name": "dynatron/dealer",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:dynatron/dealer.git",
-                "reference": "fa413acf685e21808baf8948bbfbf85a5b2f57fd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dynatron/dealer/zipball/fa413acf685e21808baf8948bbfbf85a5b2f57fd",
-                "reference": "fa413acf685e21808baf8948bbfbf85a5b2f57fd",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Dynatron\\Dealer\\": ""
-                }
-            },
-            "authors": [
-                {
-                    "name": "Matthew Reschke",
-                    "email": "mreschke@dynatronsoftware.com"
-                }
-            ],
-            "description": "Dynatron Dealer",
-            "support": {
-                "source": "https://github.com/dynatron/dealer/tree/master",
-                "issues": "https://github.com/dynatron/dealer/issues"
-            },
-            "time": "2015-02-02 04:16:02"
         },
         {
             "name": "easybook/geshi",
@@ -750,12 +714,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "388aa6a1c3aa16a4e7f6fa850fa6f08bd3143ccd"
+                "reference": "cd002a10717f53bf7a1af20b55a55c16c6191b29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/388aa6a1c3aa16a4e7f6fa850fa6f08bd3143ccd",
-                "reference": "388aa6a1c3aa16a4e7f6fa850fa6f08bd3143ccd",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/cd002a10717f53bf7a1af20b55a55c16c6191b29",
+                "reference": "cd002a10717f53bf7a1af20b55a55c16c6191b29",
                 "shasum": ""
             },
             "require": {
@@ -867,7 +831,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-02-13 23:23:27"
+            "time": "2015-02-16 00:25:22"
         },
         {
             "name": "league/flysystem",

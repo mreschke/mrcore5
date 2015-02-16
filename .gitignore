@@ -6,3 +6,7 @@
 Thumbs.db
 .nfs*
 .swp
+/public/uploads/*
+!/public/uploads/avatar_user1.png
+!/public/uploads/avatar_user2.png
+!/public/uploads/badge1.png

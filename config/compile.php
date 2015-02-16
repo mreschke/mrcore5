@@ -20,6 +20,9 @@ return [
 		realpath(__DIR__.'/../app/Providers/ConfigServiceProvider.php'),
 		realpath(__DIR__.'/../app/Providers/EventServiceProvider.php'),
 		realpath(__DIR__.'/../app/Providers/RouteServiceProvider.php'),
+		realpath(__DIR__.'/../../Modules/Foundation/Providers/FoundationServiceProvider.php'),
+		realpath(__DIR__.'/../../Modules/Auth/Providers/AuthServiceProvider.php'),
+		realpath(__DIR__.'/../../Modules/Wiki/Providers/WikiServiceProvider.php'),
 
 	],
 

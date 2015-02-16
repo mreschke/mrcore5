@@ -1,7 +1,7 @@
 <?php namespace Mrcore\Facades;
 
 /**
- * @see \Mrcore\Mrcore
+ * @see \Mrcore\Mrcore\Mrcore
  */
 class Mrcore extends \Illuminate\Support\Facades\Facade {
 
@@ -10,6 +10,6 @@ class Mrcore extends \Illuminate\Support\Facades\Facade {
 	 *
 	 * @return string
 	 */
-	protected static function getFacadeAccessor() { return 'mrcore'; }
+	protected static function getFacadeAccessor() { return 'Mrcore\Mrcore\Mrcore'; }
 
 }

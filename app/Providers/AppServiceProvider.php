@@ -13,7 +13,6 @@ class AppServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-
 		// ??????????????????????? App::error not exist, this was in global/start
 		// Mrcore FormValidationException
 		#\App::error(function(Mrcore\Exceptions\FormValidationException $exception, $code)
@@ -37,6 +36,7 @@ class AppServiceProvider extends ServiceProvider {
 		// Register Foundation Facades
 		$loader = \Illuminate\Foundation\AliasLoader::getInstance();
 		$loader->alias('Mrcore', 'Mrcore\Facades\Mrcore');
+
 
 		$this->app->bind('Illuminate\Contracts\Auth\Registrar', 'Mrcore\Services\Registrar');
 

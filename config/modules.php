@@ -126,14 +126,14 @@ return [
 		'Dbal' => [
 			'type' => 'module',
 			'namespace' => 'Mreschke\Dbal',
-			'provider' => 'Mreschke\Dbal\DbalServiceProvider',
+			'provider' => 'Mreschke\Dbal\Providers\DbalServiceProvider',
 			'path' => '../Modules/Mreschke/Dbal',
 		],
 
 		'Render' => [
 			'type' => 'module',
 			'namespace' => 'Mreschke\Render',
-			'provider' => 'Mreschke\Render\RenderServiceProvider',
+			'provider' => 'Mreschke\Render\Providers\RenderServiceProvider',
 			'path' => '../Modules/Mreschke/Render',
 		],
 
