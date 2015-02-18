@@ -2,6 +2,7 @@
 
 use App;
 use Config;
+use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider {
@@ -33,11 +34,11 @@ class AppServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		// Register Foundation Facades
-		$loader = \Illuminate\Foundation\AliasLoader::getInstance();
-		$loader->alias('Mrcore', 'Mrcore\Facades\Mrcore');
+		// Register Facades
+		$facade = AliasLoader::getInstance();
+		$facade->alias('Mrcore', 'Mrcore\Facades\Mrcore');
 
-
+		// Registrar Bindings
 		$this->app->bind('Illuminate\Contracts\Auth\Registrar', 'Mrcore\Services\Registrar');
 
 		// Mrcore Bindings

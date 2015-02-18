@@ -39,56 +39,6 @@ class RouteServiceProvider extends ServiceProvider {
 		{
 			require app_path('Http/routes.php');
 		});
-
-		// Get list of applications from repository
-		$applications = [
-			['namespace' => 'Dynatron\Dealer', 'prefix' => 'dealer'],
-		];
-
-		// Load application only if the route prefix is matched!
-		foreach ($applications as $application) {
-			$routeMatched = false;
-			if (preg_match("|^$application[prefix]|", Request::path())) $routeMatched = true;
-			
-			if ($routeMatched) {
-				// realpath() returns false if path not found - very helpful
-				$application['path'] = realpath(str_replace('\\', '/', __DIR__."/../../../Applications/$application[namespace]"));
-				list($application['vendor'], $application['package']) = explode('\\', $application['namespace']);
-				if ($application['path']) {
-
-					// Define a route group with this apps prefix and namespace
-					$router->group(['namespace' => $application['namespace'], 'prefix' => $application['prefix']], function($router) use($application) {
-
-						// Register the applications autoloader (optional)
-						$autoload = realpath("$application[path]/vendor/autoload.php");
-						if ($autoload) require $autoload;
-
-						// Register the applications configs
-						#$configs = realpath("$application[path]/Configs");
-						#if ($configs) {
-							//this is not in laravel 5 anymore
-							#$this->app['config']->package(snake_case($application['package']), $configs, $application['namespace']);
-						#}
-
-						// Register the applications service provider (optional)
-						$provider = realpath("$application[path]/Providers/AppServiceProvider.php");
-						if ($provider) $this->app->register("$application[namespace]\Providers\AppServiceProvider");
-
-						// Register the applications views
-						$views = realpath("$application[path]/Views");
-						if ($views) $this->loadViewsFrom("$application[path]/Views", snake_case($application['package']));
-
-						// Register the applications routes (optional)
-						$routes = realpath("$application[path]/Http/routes.php");
-						if ($routes) require $routes;
-
-					});
-				}
-				break;
-			}
-		
-		}
-
 	}
 
 }
