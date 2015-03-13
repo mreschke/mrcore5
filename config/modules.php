@@ -117,27 +117,46 @@ return [
 
 
 
-		'Helpers' => [
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		'Mreschke\Helpers' => [
 			'type' => 'module',
 			'namespace' => 'Mreschke\Helpers',
 			'path' => '../Modules/Mreschke/Helpers',
 		],
 
-		'Dbal' => [
+		'Mreschke\Dbal' => [
 			'type' => 'module',
 			'namespace' => 'Mreschke\Dbal',
 			'provider' => 'Mreschke\Dbal\Providers\DbalServiceProvider',
 			'path' => '../Modules/Mreschke/Dbal',
 		],
 
-		'Render' => [
+		'Mreschke\Render' => [
 			'type' => 'module',
 			'namespace' => 'Mreschke\Render',
 			'provider' => 'Mreschke\Render\Providers\RenderServiceProvider',
 			'path' => '../Modules/Mreschke/Render',
 		],
 
-		'Mrcore4Legacy' => [
+		'Mreschke\Mrcore4Legacy' => [
 			'type' => 'module',
 			'namespace' => 'Mreschke\Mrcore4Legacy',
 			'provider' => 'Mreschke\Mrcore4Legacy\Providers\Mrcore4LegacyServiceProvider',

@@ -1,6 +1,6 @@
 <?php namespace Mrcore\Mrcore;
 
-use LayoutFacade;
+use Layout as LayoutFacade;
 
 /**
  * This is the layout API layer used from the Mrcore class/facade

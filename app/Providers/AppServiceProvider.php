@@ -51,7 +51,7 @@ class AppServiceProvider extends ServiceProvider {
 		$this->app->bind('Mrcore\Mrcore\UserInterface', 'Mrcore\Mrcore\User');		
 
 		// DEBUG ONLY, set PHP error reporting level
-		error_reporting(E_ERROR | E_WARNING | E_PARSE);
+		#error_reporting(E_ERROR | E_WARNING | E_PARSE);
 		#error_reporting(E_ERROR | E_WARNING | E_PARSE | E_DEPRECATED);
 
 	}
