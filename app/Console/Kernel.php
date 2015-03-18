@@ -12,7 +12,6 @@ class Kernel extends ConsoleKernel {
 	 */
 	protected $commands = [
 		'Mrcore\Console\Commands\Inspire',
-		'Mrcore\Modules\Wiki\Console\Commands\IndexPosts',
 	];
 
 	/**
@@ -23,7 +22,8 @@ class Kernel extends ConsoleKernel {
 	 */
 	protected function schedule(Schedule $schedule)
 	{
-		$schedule->command('inspire')->hourly();
+		$schedule->command('inspire')
+				 ->hourly();
 	}
 
 }
