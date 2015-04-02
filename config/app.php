@@ -154,7 +154,7 @@ return [
 		/*
 		 * Additional Service Providers...
 		 */
-		//'Barryvdh\Debugbar\ServiceProvider',
+		'Barryvdh\Debugbar\ServiceProvider',
 
 	],
 

@@ -1,6 +1,7 @@
 <?php namespace Mrcore\Exceptions;
 
 use App;
+use Config;
 use Exception;
 use Illuminate\Http\Response;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
@@ -38,7 +39,7 @@ class Handler extends ExceptionHandler {
      */
     public function render($request, Exception $e)
     {
-        if (App::runningInConsole()) {
+        if (App::runningInConsole() || Config::get('app.debug') == false) {
             // Original Laravel
             return parent::render($request, $e);
         } else {
