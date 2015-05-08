@@ -33,10 +33,37 @@
 
 <p>Installation</p>
 
-<pre><code>cd /var/www
-git clone https://github.com/mreschke/mrcore5
-cd mrcore5
+<pre><code># Prep directories
+mkdir -p /var/www/mrcore5/{Apps,Files,Modules,Themes}
+mkdir -p /var/www/mrcore5/Files/index/{1..10}
+
+# Helper scripts
+echo '/var/www/mrcore5/System/artisan "$@"' &gt; /usr/local/bin/mrcore
+echo 'echo "$@" | /var/www/mrcore5/System/artisan tinker' &gt; /usr/local/bin/tinker
+chmod a+x /usr/local/bin/*
+
+# Clone mrcore5 repo
+cd /var/www/mrcore5
+git clone https://github.com/mreschke/mrcore5 System
+cd System
+
+# Alter environment variables
+cp .env.example .env
+# edit .env for your environment
+
+# Customize modules.php
+# You have to remove any modules from modules.php that you are not using
+# manually edit /var/www/mrcore5/System/config/modules.php
+
+# Compose mrcore5
+cd /var/www/mrcore5/System
 composer update
+# Test with by simply typing mrcore, should see artisan help output
+
+# Migrate
+mysql -uroot -p -e "create database mrcore5"
+mrcore migrate
+mrcore db:seed
 </code></pre>
         </section>
 
