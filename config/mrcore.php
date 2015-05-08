@@ -73,30 +73,6 @@ return [
 
 	/*
 	|--------------------------------------------------------------------------
-	| Company Name
-	|--------------------------------------------------------------------------
-	|
-	| Your company name.  Used for display on the login page and misc locations
-	|
-	*/
-	
-	'company' => 'mrcore6.dev',
-
-	/*
-	|--------------------------------------------------------------------------
-	| Logo Text
-	|--------------------------------------------------------------------------
-	|
-	| The text to be displayed in the top left header (your logo area)
-	| Can include HTML and Font Awesome icons
-	| Example: <i class="icon-code"></i> MySite
-	|
-	*/
-
-	'logo_text' => '<div>mrcore<i class="fa fa-sun-o"></i>wiki</div>',
-
-	/*
-	|--------------------------------------------------------------------------
 	| Post Encryption
 	|--------------------------------------------------------------------------
 	|
@@ -121,7 +97,7 @@ return [
 	*/
 
 	'use_cache' => env('MRCORE_CACHE', true),
-	'cache_expires' => 60,
+	'cache_expires' => env('MRCORE_CACHE_EXPIRES', 60),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -132,7 +108,7 @@ return [
 	|
 	*/
 
-	'search_pagesize' => 10,
+	'search_pagesize' => env('MRCORE_SEARCH_PAGESIZE', 10),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -143,7 +119,7 @@ return [
 	|
 	*/
 
-	'teaser_length' => 500,
+	'teaser_length' => env('MRCORE_TEASER_LENGTH', 500),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -155,7 +131,7 @@ return [
 	|
 	*/
 
-	'home' => 1,
+	'home' => env('MRCORE_HOME', 1),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -167,7 +143,7 @@ return [
 	|
 	*/
 
-	'help' => 'http://mrcore.mreschke.com/mrcore/help',
+	'help' => env('MRCORE_HELP', 'http://mrcore.mreschke.com/mrcore/help'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -180,7 +156,7 @@ return [
 	|
 	*/
 
-	'cheat' => 'http://mrcore.mreschke.com/mrcore/cheatsheet',
+	'cheat' => env('MRCORE_CHEAT', 'http://mrcore.mreschke.com/mrcore/cheatsheet'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -191,7 +167,7 @@ return [
 	|
 	*/
 
-	'workbench' => 5,
+	'workbench' => env('MRCORE_WORKBENCH', 5),
 
 	/*
 	|-------------------e------------------------------------------------------
@@ -205,7 +181,7 @@ return [
 	|
 	*/
 
-	'global' => 2,
+	'global' => env('MRCORE_GLOBAL', 2),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -217,7 +193,7 @@ return [
 	|
 	*/
 
-	'userinfo' => 6,
+	'userinfo' => env('MRCORE_USERINFO', 6),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -229,7 +205,7 @@ return [
 	|
 	*/
 
-	'searchmenu' => 7,
+	'searchmenu' => env('MRCORE_SEARCHMENU', 7),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -241,7 +217,7 @@ return [
 	|
 	*/
 
-	'doc_template' => 8,
+	'doc_template' => env('MRCORE_DOC_TEMPLATE', 8),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -253,7 +229,7 @@ return [
 	|
 	*/
 
-	'page_template' => 9,
+	'page_template' => env('MRCORE_PAGE_TEMPLATE', 9),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -265,7 +241,7 @@ return [
 	|
 	*/
 
-	'app_template' => 10,
+	'app_template' => env('MRCORE_APP_TEMPLATE', 10),
 
 	/*
 	|--------------------------------------------------------------------------
