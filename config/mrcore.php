@@ -7,7 +7,7 @@ return [
 	| Site Host
 	|--------------------------------------------------------------------------
 	|
-	| This is the sites host only address, so if you site is 
+	| This is the sites host only address, so if you site is
 	| http://wiki.example.com then this value should be just example.com
 	|
 	*/
@@ -69,7 +69,7 @@ return [
 	|
 	*/
 
-	'files' => env('MRCORE_FILE_PATH', '/var/www/mrcore6/Files'),
+	'files' => env('MRCORE_FILE_PATH', '/var/www/mrcore5/Files'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -188,7 +188,7 @@ return [
 	| User Info Post ID
 	|--------------------------------------------------------------------------
 	|
-	| This post ID content is displayed when users click the avatar user 
+	| This post ID content is displayed when users click the avatar user
 	| dropdown.  This allows you to customze the user dropdown menu.
 	|
 	*/
