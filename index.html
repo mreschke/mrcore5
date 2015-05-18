@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
     <!--[if lt IE 9]>
@@ -64,6 +64,22 @@ composer update
 mysql -uroot -p -e "create database mrcore5"
 mrcore migrate
 mrcore db:seed
+
+# Queue
+I use redis queuing and supervisor to keep it running
+apt-get install supervisor
+cat &gt; /etc/supervisor/conf.d/mrcore5_queue.conf &lt;&lt; "EOF"
+[program:mrcore5_queue]
+command=/var/www/mrcore5/System/artisan queue:listen --tries=3 --sleep=5
+autostart=true
+autorestart=true
+startretris=3
+stderr_logfile=/var/www/mrcore5/System/storage/logs/queue.err
+stdout_logfile=/var/www/mrcore5/System/storage/logs/queue.log
+user=toor
+EOF
+supervisorctl reread
+supervisorctl update
 </code></pre>
         </section>
 
