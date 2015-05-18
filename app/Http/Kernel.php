@@ -15,9 +15,7 @@ class Kernel extends HttpKernel {
 		'Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse',
 		'Illuminate\Session\Middleware\StartSession',
 		'Illuminate\View\Middleware\ShareErrorsFromSession',
-		#'Mrcore\Http\Middleware\VerifyCsrfToken',
-		'Mrcore\Modules\Wiki\Http\Middleware\AnalyzeRoute',
-		'Mrcore\Modules\Foundation\Http\Middleware\LoadModules',
+		#'Mrcore\Http\Middleware\VerifyCsrfToken', ?? this broke some submit somewhere? maybe edit page??
 	];
 
 	/**

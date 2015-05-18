@@ -4,10 +4,6 @@
 	"keywords": ["mrcore", "wiki", "cms", "framework", "laravel"],
 	"license": "MIT",
 	"type": "project",
-    "repositories": [
-        { "type": "vcs", "url": "https://github.com/dynatron/dealer"},
-        { "type": "vcs", "url": "https://github.com/mreschke/mrcore-themes-bootswatch"}
-    ],
 	"require": {
 		"laravel/framework": "5.0.*",
 		"illuminate/html": "~5.0",
