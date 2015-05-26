@@ -23,7 +23,7 @@ return [
 			'controller_namespace' => 'Mrcore\Modules\Foundation\Http\Controllers',
 			'provider' => 'Mrcore\Modules\Foundation\Providers\FoundationServiceProvider',
 			'path' => '../Modules/Foundation',
-			'routes' => '../Modules/Foundation/Http/routes.php',
+			'routes' => 'Http/routes.php',
 			'route_prefix' => null,
 			'views' => null,
 			'view_prefix' => null,
@@ -37,11 +37,11 @@ return [
 			'controller_namespace' => 'Mrcore\Modules\Auth\Http\Controllers',
 			'provider' => 'Mrcore\Modules\Auth\Providers\AuthServiceProvider',
 			'path' => '../Modules/Auth',
-			'routes' => '../Modules/Auth/Http/routes.php',
+			'routes' => 'Http/routes.php',
 			'route_prefix' => null,
-			'views' => '../Modules/Auth/Views',
+			'views' => 'Views',
 			'view_prefix' => null,
-			'assets' => '../Modules/Auth/Assets',
+			'assets' => 'Assets',
 			'enabled' => true,
 		],
 
@@ -51,27 +51,13 @@ return [
 			'controller_namespace' => 'Mrcore\Modules\Wiki\Http\Controllers',
 			'provider' => 'Mrcore\Modules\Wiki\Providers\WikiServiceProvider',
 			'path' => '../Modules/Wiki',
-			'routes' => '../Modules/Wiki/Http/routes.php',
+			'routes' => 'Http/routes.php',
 			'route_prefix' => null,
-			'views' => '../Modules/Wiki/Views',
+			'views' => 'Views',
 			'view_prefix' => null,
-			'assets' => '../Modules/Wiki/Assets',
+			'assets' => 'Assets',
 			'enabled' => true,
 		],
-
-		/*'%app%' => [
-			'type' => 'module',
-			'namespace' => 'Mrcore\Apps\Mrcore\Appstub',
-			'controller_namespace' => 'Mrcore\Apps\Mrcore\Appstub\Http\Controllers',
-			'provider' => 'Mrcore\Apps\Mrcore\Appstub\Providers\AppstubServiceProvider',
-			'path' => '../Apps/Mrcore\Appstub',
-			'routes' => '../Apps/Mrcore/Appstub/Http/routes.php',
-			'route_prefix' => 'appstub',
-			'views' => '../Apps/Mrcore/Appstub/Views',
-			'view_prefix' => 'appstub',
-			'assets' => '../Apps/Mrcore/Appstub/Assets',
-			'enabled' => true,
-		],*/
 
 		// Bootswatch Themes
 		// default cerulean cosmo cyborg darkly flatly journal lumen paper
@@ -84,9 +70,9 @@ return [
 			'path' => '../Themes/Bootswatch',
 			'routes' => null,
 			'route_prefix' => null,
-			'views' => '../Themes/Bootswatch/Views',
+			'views' => 'Views',
 			'view_prefix' => null,
-			'assets' => '../Themes/Bootswatch/Assets',
+			'assets' => 'Assets',
 			'css' => ['css/bootstrap/simplex.min.css'],
 			'container' => [
 				'header' => true,
@@ -104,37 +90,15 @@ return [
 			'path' => '../Themes/Dynatron',
 			'routes' => null,
 			'route_prefix' => null,
-			'views' => '../Themes/Dynatron/Views',
+			'views' => 'Views',
 			'view_prefix' => null,
-			'assets' => '../Themes/Dynatron/Assets',
+			'assets' => 'Assets',
 			'css' => [
 				'css/bootstrap/dynatron.min.css',
 				'css/bootstrap/override/dynatron-dynatron.css',
 			],
 			'enabled' => false,
 		],
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 		'Mreschke\Helpers' => [
 			'type' => 'module',
@@ -214,6 +178,5 @@ return [
 	*/
 
 	'debug' => true,
-
 
 ];
