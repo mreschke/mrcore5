@@ -29,9 +29,9 @@ return [
 	|
 	*/
 
-	'lifetime' => 120,
+	'lifetime' => env('SESSION_LIFETIME', 120),
 
-	'expire_on_close' => false,
+	'expire_on_close' => env('SESSION_EXPIRE_ON_CLOSE', false),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -44,7 +44,7 @@ return [
 	|
 	*/
 
-	'encrypt' => false,
+	'encrypt' => env('SESSION_ENCRYPT', false),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -57,7 +57,7 @@ return [
 	|
 	*/
 
-	'files' => storage_path().'/framework/sessions',
+	'files' => env('SESSION_FILES', storage_path().'/framework/sessions'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -70,7 +70,7 @@ return [
 	|
 	*/
 
-	'connection' => null,
+	'connection' => env('SESSION_CONNECTION', null),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -109,7 +109,7 @@ return [
 	|
 	*/
 
-	'cookie' => 'laravel_session',
+	'cookie' => env('SESSION_COOKIE', 'laravel_session'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -122,7 +122,7 @@ return [
 	|
 	*/
 
-	'path' => '/',
+	'path' => env('SESSION_PATH', '/'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -135,7 +135,7 @@ return [
 	|
 	*/
 
-	'domain' => null,
+	'domain' => env('SESSION_DOMAIN', null),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -148,6 +148,6 @@ return [
 	|
 	*/
 
-	'secure' => false,
+	'secure' => env('SESSION_SECURE', false),
 
 ];

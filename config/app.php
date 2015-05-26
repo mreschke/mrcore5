@@ -13,7 +13,7 @@ return [
 	|
 	*/
 
-	'debug' => env('APP_DEBUG'),
+	'debug' => env('APP_DEBUG', false),
 	
 	/*
 	|--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ return [
 	|
 	*/
 
-	'url' => env('APP_URL', 'http://localhost'),
+	'url' => env('APP_URL', 'http://mrcore5.dev'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ return [
 	|
 	*/
 
-	'timezone' => 'America/Chicago',
+	'timezone' => env('APP_TIMEZONE', 'America/Chicago'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
 	|
 	*/
 
-	'locale' => 'en',
+	'locale' => env('APP_LOCALE', 'en'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return [
 	|
 	*/
 
-	'fallback_locale' => 'en',
+	'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -95,7 +95,7 @@ return [
 	|
 	*/
 
-	'log' => 'daily',
+	'log' => env('APP_LOG', 'daily'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -154,7 +154,7 @@ return [
 		/*
 		 * Additional Service Providers...
 		 */
-		'Barryvdh\Debugbar\ServiceProvider',
+		#'Barryvdh\Debugbar\ServiceProvider',
 
 	],
 

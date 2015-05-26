@@ -4,7 +4,7 @@ use DB;
 use Auth;
 use Config;
 use Session;
-use Mrcore\Modules\Wiki\Support\Cache;
+use Mrcore\Modules\Foundation\Support\Cache;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
@@ -102,10 +102,10 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 		if (Auth::check()) {
 			return Auth::user();
 		} else {
-			$user = User::find(Config::get('mrcore.anonymous'));
+			$user = User::find(Config::get('mrcore.wiki.anonymous'));
 			Auth::login($user);
 			Auth::user()->login();			
-			#return self::find(Config::get('mrcore.anonymous'));
+			#return self::find(Config::get('mrcore.wiki.anonymous'));
 			return Auth::user();
 		}
 	}

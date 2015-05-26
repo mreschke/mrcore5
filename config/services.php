@@ -15,8 +15,8 @@ return [
 	*/
 
 	'mailgun' => [
-		'domain' => '',
-		'secret' => '',
+		'domain' => env('SERVICES_MAILGUN_DOMAIN', ''),
+		'secret' => env('SERVICES_MAILGUN_SECRET', ''),
 	],
 
 	'mandrill' => [
@@ -24,14 +24,14 @@ return [
 	],
 
 	'ses' => [
-		'key' => '',
-		'secret' => '',
-		'region' => 'us-east-1',
+		'key' => env('SERVICES_SES_KEY', ''),
+		'secret' => env('SERVICES_SES_SECRET', ''),
+		'region' => env('SERVICES_SES_REGION', 'us-east-1'),
 	],
 
 	'stripe' => [
-		'model'  => 'User',
-		'secret' => '',
+		'model'  => env('SERVICES_STRIPE_MODEL', 'User'),
+		'secret' => env('SERVICES_STRIPE_SECRET', ''),
 	],
 
 ];
