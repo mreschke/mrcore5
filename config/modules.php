@@ -1,8 +1,13 @@
 <?php
 
-// NOTICE: Do not use laravels env() function here.
-// This config is loaded by the asset manager which has no such function available.
-
+/**
+ * Mrcore Modules Configuration File
+ *
+ * Do NOT use laravels env() function here as this is used by the asset manager.
+ * This config does not allow partial overrides. You must publish
+ * the entire script: ./artisan vendor:publish --tag="mrcore.modules.configs"
+ * Access with Config::get('mrcore.xyz')
+ */
 return [
 
 	/*
@@ -24,11 +29,6 @@ return [
 			'provider' => 'Mrcore\Modules\Foundation\Providers\FoundationServiceProvider',
 			'path' => '../Modules/Foundation',
 			'routes' => 'Http/routes.php',
-			'route_prefix' => null,
-			'views' => null,
-			'view_prefix' => null,
-			'assets' => null,
-			'enabled' => true,
 		],
 
 		'Auth' =>  [
@@ -42,7 +42,6 @@ return [
 			'views' => 'Views',
 			'view_prefix' => null,
 			'assets' => 'Assets',
-			'enabled' => true,
 		],
 
 		'Wiki' => [
@@ -56,7 +55,6 @@ return [
 			'views' => 'Views',
 			'view_prefix' => null,
 			'assets' => 'Assets',
-			'enabled' => true,
 		],
 
 		// Bootswatch Themes
@@ -163,8 +161,8 @@ return [
 	'routes' => [
 		'%app%',
 		'Auth',
-		'Wiki',
 		'Foundation',
+		'Wiki',
 	],
 
 	/*
