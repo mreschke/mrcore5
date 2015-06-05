@@ -159,10 +159,10 @@ return [
 	],
 
 	'routes' => [
+		'Wiki',
 		'%app%',
 		'Auth',
 		'Foundation',
-		'Wiki',
 	],
 
 	/*
