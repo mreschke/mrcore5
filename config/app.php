@@ -76,6 +76,10 @@ return [
 	| to a random, 32 character string, otherwise these encrypted strings
 	| will not be safe. Please do this before deploying an application!
 	|
+	| Laravel 4 legacy: rijndael-256 (php const MCRYPT_RIJNDAEL_256)
+	| Laravel 4 default: rijndael-128 (php const MCRYPT_RIJNDAEL_128)
+	| Laravel 5.1 default: AES-256-CBC (as a string, not PHP const)
+	|
 	*/
 
 	'key' => env('APP_KEY', 'SomeRandomString'),
