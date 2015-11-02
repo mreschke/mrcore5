@@ -27,7 +27,7 @@ return [
 			'namespace' => 'Mrcore\Modules\Foundation',
 			'controller_namespace' => 'Mrcore\Modules\Foundation\Http\Controllers',
 			'provider' => 'Mrcore\Modules\Foundation\Providers\FoundationServiceProvider',
-			'path' => ['../Modules/Foundation', 'vendor/mrcore/foundation'],
+			'path' => ['vendor/mrcore/foundation', '../Modules/Foundation'],
 			'routes' => 'Http/routes.php',
 		],
 
@@ -36,12 +36,13 @@ return [
 			'namespace' => 'Mrcore\Modules\Auth',
 			'controller_namespace' => 'Mrcore\Modules\Auth\Http\Controllers',
 			'provider' => 'Mrcore\Modules\Auth\Providers\AuthServiceProvider',
-			'path' => ['../Modules/Auth', 'vendor/mrcore/auth'],
+			'path' => ['vendor/mrcore/auth', '../Modules/Auth'],
 			'routes' => 'Http/routes.php',
 			'route_prefix' => null,
 			'views' => 'Views',
 			'view_prefix' => null,
 			'assets' => 'Assets',
+			'enabled' => true,
 		],
 
 		'Wiki' => [
@@ -49,12 +50,13 @@ return [
 			'namespace' => 'Mrcore\Modules\Wiki',
 			'controller_namespace' => 'Mrcore\Modules\Wiki\Http\Controllers',
 			'provider' => 'Mrcore\Modules\Wiki\Providers\WikiServiceProvider',
-			'path' => ['../Modules/Wiki', 'vendor/mrcore/wiki'],
+			'path' => ['vendor/mrcore/wiki', '../Modules/Wiki'],
 			'routes' => 'Http/routes.php',
 			'route_prefix' => null,
 			'views' => 'Views',
 			'view_prefix' => null,
 			'assets' => 'Assets',
+			'enabled' => true,
 		],
 
 		// Bootswatch Themes
@@ -65,7 +67,7 @@ return [
 			'namespace' => 'Mrcore\Themes\Bootswatch',
 			'controller_namespace' => null,
 			'provider' => 'Mrcore\Themes\Bootswatch\Providers\ThemeServiceProvider',
-			'path' => ['../Themes/Bootswatch', 'vendor/mrcore/bootswatch-theme'],
+			'path' => ['vendor/mrcore/bootswatch-theme', '../Themes/Bootswatch'],
 			'routes' => null,
 			'route_prefix' => null,
 			'views' => 'Views',
@@ -85,18 +87,18 @@ return [
 
 		'SubTheme' => [
 			'type' => 'subtheme',
-			'namespace' => 'Mrcore\Themes\Dynatron',
+			'namespace' => 'Mrcore\Themes\Example',
 			'controller_namespace' => null,
-			'provider' => 'Mrcore\Themes\Dynatron\Providers\ThemeServiceProvider',
-			'path' => ['../Themes/Dynatron', 'vendor/dynatron/dynatron-theme'],
+			'provider' => 'Mrcore\Themes\Example\Providers\ThemeServiceProvider',
+			'path' => ['vendor/dynatron/example-theme', '../Themes/Example'],
 			'routes' => null,
 			'route_prefix' => null,
 			'views' => 'Views',
 			'view_prefix' => null,
 			'assets' => 'Assets',
 			'css' => [
-				'css/bootstrap/dynatron.min.css',
-				'css/bootstrap/override/dynatron-dynatron.css',
+				'css/bootstrap/slate.min.css',
+				#'css/bootstrap/override/example.css',
 			],
 			'enabled' => false,
 		],
@@ -104,28 +106,32 @@ return [
 		'Mreschke\Helpers' => [
 			'type' => 'module',
 			'namespace' => 'Mreschke\Helpers',
-			'path' => ['../Apps/Mreschke/Helpers', 'vendor/mreschke/helpers'],
+			'path' => ['vendor/mreschke/helpers', '../Apps/Mreschke/Helpers'],
+			'enabled' => true,
 		],
 
 		'Mreschke\Dbal' => [
 			'type' => 'module',
 			'namespace' => 'Mreschke\Dbal',
 			'provider' => 'Mreschke\Dbal\Providers\DbalServiceProvider',
-			'path' => ['../Apps/Mreschke/Dbal', 'vendor/mreschke/dbal'],
+			'path' => ['vendor/mreschke/dbal', '../Apps/Mreschke/Dbal'],
+			'enabled' => true,
 		],
 
 		'Mreschke\Render' => [
 			'type' => 'module',
 			'namespace' => 'Mreschke\Render',
 			'provider' => 'Mreschke\Render\Providers\RenderServiceProvider',
-			'path' => ['../Apps/Mreschke/Render', 'vendor/mreschke/render'],
+			'path' => ['vendor/mreschke/render', '../Apps/Mreschke/Render'],
+			'enabled' => true,
 		],
 
 		'Mreschke\Mrcore4Legacy' => [
 			'type' => 'module',
 			'namespace' => 'Mreschke\Mrcore4Legacy',
 			'provider' => 'Mreschke\Mrcore4Legacy\Providers\Mrcore4LegacyServiceProvider',
-			'path' => ['../Apps/Mreschke/Mrcore4Legacy', 'vendor/mreschke/mrcore4-legacy'],
+			'path' => ['vendor/mreschke/mrcore4-legacy', '../Apps/Mreschke/Mrcore4Legacy'],
+			'enabled' => true,
 		],
 
 	],
