@@ -27,7 +27,7 @@ return [
 			'namespace' => 'Mrcore\Modules\Foundation',
 			'controller_namespace' => 'Mrcore\Modules\Foundation\Http\Controllers',
 			'provider' => 'Mrcore\Modules\Foundation\Providers\FoundationServiceProvider',
-			'path' => '../Modules/Foundation',
+			'path' => ['../Modules/Foundation', 'vendor/mrcore/foundation'],
 			'routes' => 'Http/routes.php',
 		],
 
@@ -36,7 +36,7 @@ return [
 			'namespace' => 'Mrcore\Modules\Auth',
 			'controller_namespace' => 'Mrcore\Modules\Auth\Http\Controllers',
 			'provider' => 'Mrcore\Modules\Auth\Providers\AuthServiceProvider',
-			'path' => '../Modules/Auth',
+			'path' => ['../Modules/Auth', 'vendor/mrcore/auth'],
 			'routes' => 'Http/routes.php',
 			'route_prefix' => null,
 			'views' => 'Views',
@@ -49,7 +49,7 @@ return [
 			'namespace' => 'Mrcore\Modules\Wiki',
 			'controller_namespace' => 'Mrcore\Modules\Wiki\Http\Controllers',
 			'provider' => 'Mrcore\Modules\Wiki\Providers\WikiServiceProvider',
-			'path' => '../Modules/Wiki',
+			'path' => ['../Modules/Wiki', 'vendor/mrcore/wiki'],
 			'routes' => 'Http/routes.php',
 			'route_prefix' => null,
 			'views' => 'Views',
@@ -65,13 +65,16 @@ return [
 			'namespace' => 'Mrcore\Themes\Bootswatch',
 			'controller_namespace' => null,
 			'provider' => 'Mrcore\Themes\Bootswatch\Providers\ThemeServiceProvider',
-			'path' => '../Themes/Bootswatch',
+			'path' => ['../Themes/Bootswatch', 'vendor/mrcore/bootswatch-theme'],
 			'routes' => null,
 			'route_prefix' => null,
 			'views' => 'Views',
 			'view_prefix' => null,
 			'assets' => 'Assets',
-			'css' => ['css/bootstrap/simplex.min.css'],
+			'css' => [
+				'css/bootstrap/simplex.min.css',
+				'css/bootstrap/override/theme-simplex.css',
+			],
 			'container' => [
 				'header' => true,
 				'body' => true,
@@ -85,7 +88,7 @@ return [
 			'namespace' => 'Mrcore\Themes\Dynatron',
 			'controller_namespace' => null,
 			'provider' => 'Mrcore\Themes\Dynatron\Providers\ThemeServiceProvider',
-			'path' => '../Themes/Dynatron',
+			'path' => ['../Themes/Dynatron', 'vendor/dynatron/dynatron-theme'],
 			'routes' => null,
 			'route_prefix' => null,
 			'views' => 'Views',
@@ -101,28 +104,28 @@ return [
 		'Mreschke\Helpers' => [
 			'type' => 'module',
 			'namespace' => 'Mreschke\Helpers',
-			'path' => '../Modules/Mreschke/Helpers',
+			'path' => ['../Apps/Mreschke/Helpers', 'vendor/mreschke/helpers'],
 		],
 
 		'Mreschke\Dbal' => [
 			'type' => 'module',
 			'namespace' => 'Mreschke\Dbal',
 			'provider' => 'Mreschke\Dbal\Providers\DbalServiceProvider',
-			'path' => '../Modules/Mreschke/Dbal',
+			'path' => ['../Apps/Mreschke/Dbal', 'vendor/mreschke/dbal'],
 		],
 
 		'Mreschke\Render' => [
 			'type' => 'module',
 			'namespace' => 'Mreschke\Render',
 			'provider' => 'Mreschke\Render\Providers\RenderServiceProvider',
-			'path' => '../Modules/Mreschke/Render',
+			'path' => ['../Apps/Mreschke/Render', 'vendor/mreschke/render'],
 		],
 
 		'Mreschke\Mrcore4Legacy' => [
 			'type' => 'module',
 			'namespace' => 'Mreschke\Mrcore4Legacy',
 			'provider' => 'Mreschke\Mrcore4Legacy\Providers\Mrcore4LegacyServiceProvider',
-			'path' => '../Modules/Mreschke/Mrcore4Legacy',
+			'path' => ['../Apps/Mreschke/Mrcore4Legacy', 'vendor/mreschke/mrcore4-legacy'],
 		],
 
 	],

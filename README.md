@@ -1,4 +1,4 @@
-# Mrcore6
+# Mrcore5
 
 A Wiki/CMS built with Laravel 5
 
@@ -7,7 +7,7 @@ See http://mrcore.mreschke.com for details and documentation.
 
 # Install
 
-?
+See http://mreschke.github.io/mrcore5/
 
 
 
