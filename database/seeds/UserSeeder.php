@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Seeder;
-use Mrcore\Models\User;
+use Mrcore\User;
 use Mreschke\Helpers\String;
+use Illuminate\Database\Seeder;
 
 class UserSeeder extends Seeder
 {
